@@ -91,9 +91,10 @@ double* arrUtils::getArr()
         str[i + 1] = '\n';
         if (isValidNumber(i, str)) // i is the str size
         {
-  
             num = atof(str); //we got a valid number and change its type to double 
        
+         
+
             arr[j] = num;
         }
         else

@@ -1,5 +1,5 @@
 #include "arrUtils.h"
-#include "algorithm.h"
+#include "InsertionSort.h"
 #include <iostream>
 #include <cstdio>
 #include <iostream>
@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-double algorithm::insertionSort()
+double InsertionSort::insertionSort()
 {
     double key;
     int j, i;
@@ -17,7 +17,6 @@ double algorithm::insertionSort()
     arr.setIndex();
     int size = arr.getSize();
     int index = arr.getIndex();
-
     for (i = 1; i < size; i++)
     {
         key = arr_1[i];//take value
@@ -30,5 +29,4 @@ double algorithm::insertionSort()
         arr_1[j] = key;   //insert in right place
     }
     return arr_1[index-1];
-    return arr_1[i - 1];
 }

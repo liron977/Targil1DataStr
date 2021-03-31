@@ -139,13 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="algorithm.cpp" />
+    <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="arrUtils.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Selection.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="algorithm.h" />
+    <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="arrUtils.h" />
+    <ClInclude Include="Selection.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
