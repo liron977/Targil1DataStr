@@ -11,17 +11,22 @@ using namespace std;
 int main()
 {
 	arrUtils arr;
-	
-	//arr.getArr();
+	arr.setUserInput();
+	arr.indexInput();
+	double* arr1 = new double[arr.getSize()];
+	double* arr2 =new double[arr.getSize()];;
+	double* arr3= new double[arr.getSize()];;
+	arr.copyArr(arr1);
+	arr.copyArr(arr2);
+	arr.copyArr(arr3);
 	InsertionSort insertionSort;
 	Selection selection;
-	//arr.printArr();
-
-	double indexAlgorithm = insertionSort.insertionSort();
-	double index = selection.selectionArr();
+	double indexAlgorithm = insertionSort.insertionSort(arr1,arr);
+	double indexSelection = selection.selectionArr(arr2,arr);
 	cout << fixed << showpoint;
 	cout << setprecision(4);
-	cout << index << endl;
-	//cout << std::setprecision(4) <<index<< endl;
+	cout <<"Insertion-sort: "<< indexAlgorithm << endl;
+	cout << "Selection "<< indexSelection << endl;
+
 
 }

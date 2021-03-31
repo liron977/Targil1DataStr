@@ -58,7 +58,7 @@ bool arrUtils::isValidNumber(int str_size, char* str)
     return true;
 
 }
-double* arrUtils::getArr()
+void arrUtils::setUserInput()
 {
     char curr_char;
     int i = 0, j, size_arr;
@@ -108,9 +108,6 @@ double* arrUtils::getArr()
 
     }
     setArr(arr, size_arr);
-    return arr;
-
-
 }
 int  arrUtils::getSize()
 {
@@ -124,7 +121,11 @@ void arrUtils::printArr()
         printf("%lf", arr[i]);
     }
 }
-void arrUtils::setIndex()
+double* arrUtils::getArr() 
+{
+    return arr;
+}
+void arrUtils::indexInput()
 {
     cout << "Please enter the requsted number:" << endl;
     cin >> index;
@@ -132,6 +133,7 @@ void arrUtils::setIndex()
         cout << "Wrong iput" << endl;
         exit(-1);
     }
+    setIndex(index);
 }
 bool arrUtils::isValidIndex(int _index)
 {
@@ -151,4 +153,11 @@ int arrUtils::getIndex()
 {
     return index;
 
+}
+void arrUtils::copyArr(double* dest_arr)
+{
+    for (int i = 0; i < size_arr; i++)
+    {
+        dest_arr[i] = arr[i];
+    }
 }

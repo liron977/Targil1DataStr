@@ -4,9 +4,10 @@
 
 class InsertionSort
 {
-	arrUtils arr;
+	//arrUtils arr;
 public:
-	double insertionSort();
+
+	double insertionSort(double* arr2, arrUtils arr);
 
 };
 

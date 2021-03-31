@@ -1,22 +1,20 @@
 #include "Selection.h"
 #include "arrUtils.h"
 
+
 void Selection::swap(double* a, double* b)
 {
     int t = *a;
     *a = *b;
     *b = t;
 }
-double Selection::selectionArr()//initialize arr in order to use a selection algorithm
+double Selection::selectionArr(double* arr2,arrUtils arr)//initialize arr in order to use a selection algorithm
 {
-    arrUtils arr, size_arr;
-    double* arr_1 = arr.getArr();
-    arr.setIndex();
+    //double* arr_1 = arr.getArr();
     int size = arr.getSize();
     int index = arr.getIndex();
-    return(selection(arr_1, 0, size - 1, index));
+    return(selection(arr2, 0, size - 1, index));
    
-    
 }
 double Selection::selection(double A[], int left, int right, int i)
 {
