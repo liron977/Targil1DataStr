@@ -1,2 +1,2 @@
-Time taken by function Insertion is : 0.000023 sec
-Time taken by function Selection is : 0.001799000 sec
+Time taken by function Insertion is : 0.000017 sec
+Time taken by function Selection is : 0.000739800 sec

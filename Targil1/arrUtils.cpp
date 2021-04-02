@@ -70,7 +70,7 @@ void arrUtils::setUserInput()
     cin >> size_arr;
     if (size_arr < 1)
     {
-        cout << "Wrong iput" << endl;
+        cout << "Wrong input" << endl;
         exit(-1);
     }
    
@@ -82,7 +82,8 @@ void arrUtils::setUserInput()
 
     for (j = 0; j < size_arr; j++)
     {
-
+        if (j == 502)
+            int x = 5;
         cin.get(curr_char);
         while (curr_char != ' ' && curr_char != '\n') //here we get each of the number characters
         {
@@ -102,7 +103,7 @@ void arrUtils::setUserInput()
         }
         else
         {
-            cout << "Wrong iput" << endl;
+            cout << "Wrong input" << endl;
             exit(-1);
         }
 
@@ -132,7 +133,7 @@ void arrUtils::indexInput()
 {
     cin >> index;
     if (!isValidIndex(index)){
-        cout << "Wrong iput" << endl;
+        cout << "Wrong input" << endl;
         exit(-1);
     }
     setIndex(index);
