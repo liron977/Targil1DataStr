@@ -26,6 +26,9 @@ public:
 	int getIndex();
 	bool isValidIndex(int _index);
 	void copyArr(double* dest_arr);
+	void swap(double* a, double* b);
+	void bubbleSort(double arr[], int n);
+	int partitionV1(double arr[], int left, int right);
 };
 
 #endif //_ARRUTILS_H

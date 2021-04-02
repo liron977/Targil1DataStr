@@ -4,10 +4,14 @@
 #include <cstdio>
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <chrono>
 using namespace std;
 
-double InsertionSort::insertionSort(double* arr1,arrUtils arr)
+double InsertionSort::insertionSort(arrUtils arr)
 {
+    double* arr1 = new double[arr.getSize()];
+    arr.copyArr(arr1);
     double key;
     int j, i;
     int size = arr.getSize();
@@ -24,4 +28,8 @@ double InsertionSort::insertionSort(double* arr1,arrUtils arr)
         arr1[j] = key;   //insert in right place
     }
     return arr1[index-1];
+}
+void  InsertionSort::runTime() {
+
+  
 }

@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
 bool arrUtils::isValidNumber(int str_size, char* str)
@@ -75,16 +76,16 @@ void arrUtils::setUserInput()
         
     arr = new double[size_arr];
 
-    curr_char = getchar(); // for whitespace from arr size 
+    cin.get(curr_char); // for whitespace from arr size 
 
     for (j = 0; j < size_arr; j++)
     {
 
-        curr_char = getchar();
+        cin.get(curr_char);
         while (curr_char != ' ' && curr_char != '\n') //here we get each of the number characters
         {
             str[i] = curr_char;
-            curr_char = getchar();
+           cin.get(curr_char);
             i++;
         }
         tmp = new char[i + 1];
@@ -160,4 +161,50 @@ void arrUtils::copyArr(double* dest_arr)
     {
         dest_arr[i] = arr[i];
     }
+}
+void arrUtils::swap(double* a, double* b)
+{
+    double t = *a;
+    *a = *b;
+    *b = t;
+}
+void arrUtils::bubbleSort(double arr[], int n)
+{
+    int i, j;
+    for (i = 0; i < n - 1; i++)
+
+        // Last i elements are already in place 
+        for (j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1])
+                swap(&arr[j], &arr[j + 1]);
+}
+int arrUtils::partitionV1(double arr[], int left, int right) {
+
+    int pivot = left;
+    int index = right;
+    while (pivot != index) {
+        if (pivot < index) {
+            if (arr[pivot] >= arr[index]) {
+                swap(&arr[pivot], &arr[index]);
+                int newIndex = pivot + 1;
+                pivot = index;
+                index = newIndex;
+            }
+            else {
+                index--;
+            }
+        }
+        else {
+            if (arr[pivot] >= arr[index]) {
+                index++;
+            }
+            else {
+                swap(&arr[pivot], &arr[index]);
+                int newIndex = pivot - 1;
+                pivot = index;
+                index = newIndex;
+            }
+        }
+    }
+    return pivot;
 }

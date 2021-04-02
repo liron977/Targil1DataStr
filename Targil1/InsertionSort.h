@@ -4,11 +4,12 @@
 
 class InsertionSort
 {
-	//arrUtils arr;
+	/*double* arr;
+	int size;*/
 public:
 
-	double insertionSort(double* arr2, arrUtils arr);
-
+	double insertionSort(arrUtils arr);
+	void runTime();
 };
 
 #endif //_INSERTIONSORT_H

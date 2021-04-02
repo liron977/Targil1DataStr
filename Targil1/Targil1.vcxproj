@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FiveSort.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="arrUtils.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Selection.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FiveSort.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="arrUtils.h" />
     <ClInclude Include="Selection.h" />
