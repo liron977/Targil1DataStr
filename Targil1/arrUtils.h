@@ -8,14 +8,19 @@ class arrUtils
 	int size_arr;
 	int index;
 public:
-	void setArr(double* _arr, int _size_arr)
+	void setArr(double* _arr)
 	{
 		arr = _arr;
-		size_arr = _size_arr;
+
 	}
 	void setIndex(int _index)
 	{
 		index = _index;
+	}
+	void setSize(int _size_arr)
+	{
+		size_arr = _size_arr;
+
 	}
 	bool isValidNumber(int str_size, char* str);
 	void setUserInput();

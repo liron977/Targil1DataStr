@@ -13,7 +13,7 @@ double FiveSort::fiveSortArr(arrUtils a)
 
 double FiveSort::sort(double* arr, int left, int index, int size)
 {
-    int pivot_index;
+    int pivot_index=0;
     if (size <= 5)
     {
         a.bubbleSort(arr, size + 1);

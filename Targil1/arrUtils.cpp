@@ -66,14 +66,16 @@ void arrUtils::setUserInput()
     char str[256];
     double num;
     char* tmp;
-    cout << "Pleas enter num of numbers\n";
+   // cout << "Pleas enter num of numbers\n";
     cin >> size_arr;
     if (size_arr < 1)
     {
         cout << "Wrong iput" << endl;
         exit(-1);
     }
-        
+   
+    setSize(size_arr);
+    indexInput();
     arr = new double[size_arr];
 
     cin.get(curr_char); // for whitespace from arr size 
@@ -108,7 +110,7 @@ void arrUtils::setUserInput()
 
 
     }
-    setArr(arr, size_arr);
+    setArr(arr);
 }
 int  arrUtils::getSize()
 {
@@ -128,7 +130,6 @@ double* arrUtils::getArr()
 }
 void arrUtils::indexInput()
 {
-    cout << "Please enter the requsted number:" << endl;
     cin >> index;
     if (!isValidIndex(index)){
         cout << "Wrong iput" << endl;
