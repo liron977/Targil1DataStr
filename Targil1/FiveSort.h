@@ -5,20 +5,10 @@
 class FiveSort
 {
 	arrUtils a;
-public:
-
-
-
+private:
 	double sort(double* arr, int left, int index, int size);
-	double fiveSortArr( arrUtils a);
-
-
-
-
-
+public:
+	double fiveSortArr(arrUtils a, double* arr3);
 };
-
-
-
 
 #endif// _FIVESORT_H

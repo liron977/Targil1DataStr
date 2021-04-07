@@ -8,28 +8,22 @@
 #include <chrono>
 using namespace std;
 
-double InsertionSort::insertionSort(arrUtils arr)
+double InsertionSort::insertionSort(arrUtils arr,double* arr1)
 {
-    double* arr1 = new double[arr.getSize()];
     arr.copyArr(arr1);
     double key;
-    int j, i;
-    int size = arr.getSize();
+    int size = arr.getSize(),j=0;
     int index = arr.getIndex();
-    for (i = 1; i < size; i++)
+    for (int i = 1; i < size; i++)
     {
         key = arr1[i];//take value
         j = i;
-        while (j > 0 && arr1[j - 1] > key)
+        while ( j > 0 && arr1[j - 1] > key)
         {
             arr1[j] = arr1[j - 1];
             j--;
         }
         arr1[j] = key;   //insert in right place
     }
-    return arr1[index-1];
-}
-void  InsertionSort::runTime() {
-
-  
+    return arr1[index - 1];
 }

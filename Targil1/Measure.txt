@@ -1,2 +1,9 @@
-Time taken by function Insertion is : 0.000017 sec
-Time taken by function Selection is : 0.000739800 sec
+Time taken by function Insertion is : 0.000002 sec
+Time taken by function Selection is : 0.000002200 sec
+Time taken by function Quintuplet is : 0.000002100 sec
+Time taken by function Insertion is : 0.000002 sec
+Time taken by function Selection is : 0.000002300 sec
+Time taken by function Quintuplet is : 0.000001500 sec
+Time taken by function Insertion is : 0.000001 sec
+Time taken by function Selection is : 0.000001300 sec
+Time taken by function Quintuplet is : 0.000001000 sec

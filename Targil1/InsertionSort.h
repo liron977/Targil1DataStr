@@ -4,12 +4,9 @@
 
 class InsertionSort
 {
-	/*double* arr;
-	int size;*/
-public:
 
-	double insertionSort(arrUtils arr);
-	void runTime();
+public:
+	double insertionSort(arrUtils arr, double* arr1);
 };
 
 #endif //_INSERTIONSORT_H

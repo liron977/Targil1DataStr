@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Algorithms.cpp" />
     <ClCompile Include="FiveSort.cpp" />
     <ClCompile Include="InsertionSort.cpp" />
     <ClCompile Include="arrUtils.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="Selection.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Algorithms.h" />
     <ClInclude Include="FiveSort.h" />
     <ClInclude Include="InsertionSort.h" />
     <ClInclude Include="arrUtils.h" />
