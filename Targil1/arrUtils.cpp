@@ -1,9 +1,6 @@
 #include "arrUtils.h"
 #include <iostream>
-#include <cstdio>
-#include <iostream>
-#include <string>
-#include <cctype>
+
 using namespace std;
 bool arrUtils::isValidNumber(int str_size, char* str)
 {
