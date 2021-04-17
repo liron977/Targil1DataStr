@@ -6,7 +6,7 @@ class InsertionSort
 {
 
 public:
-	double insertionSort(arrUtils arr, double* arr1);
+	double insertionSort(arrUtils arr, double* arr1) const;
 };
 
 #endif //_INSERTIONSORT_H

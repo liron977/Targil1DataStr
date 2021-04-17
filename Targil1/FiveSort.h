@@ -4,11 +4,11 @@
 
 class FiveSort
 {
+	enum { MIN_SIZE = 5 };
 	arrUtils a;
-private:
-	double sort(double* arr, int left, int index, int size);
+	double sort(double* arr, int left, int index, int size) const;
 public:
-	double fiveSortArr(arrUtils a, double* arr3);
+	double fiveSortArr(arrUtils a, double* arr3) const;
 };
 
 #endif// _FIVESORT_H

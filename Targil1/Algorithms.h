@@ -20,13 +20,12 @@ class Algorithms
 	FiveSort fiveSort;
 	ofstream myfile;
 	enum { INSERATION = 1, SELECTION = 2, FIVESORT = 3 };
+	void printResult(double& algo_res, int algo) const;
+	void runTimeInsertion(double* arr1);
+	void runTimeSelection(double* arr2) ;
+	void runTimeQuintuple(double* arr3);
 
 public:
 	void run();
-private:
-	void printResult(double& algo_res, int algo);
-	void runTimeInsertion(double* arr1);
-	void runTimeSelection(double* arr2);
-	void runTimeQuintuple(double* arr3);
 };
 #endif // ALGORITHMS_H

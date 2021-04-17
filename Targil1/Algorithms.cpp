@@ -1,4 +1,5 @@
 #include "Algorithms.h"
+
 void Algorithms::run(){
 
 	arr.setUserInput();
@@ -20,9 +21,11 @@ void Algorithms::run(){
 	delete[] arr2;
 	delete[] arr3;
 	arr.freeArr();
+
+
 	
 }
-void Algorithms::printResult(double& algo_res,int algo)
+void Algorithms::printResult(double& algo_res,int algo) const
 {
 	cout << fixed << showpoint;
 	cout << setprecision(4);
@@ -36,7 +39,7 @@ void Algorithms::printResult(double& algo_res,int algo)
 	}
 
 }
-void Algorithms::runTimeInsertion(double*arr1) {
+void Algorithms::runTimeInsertion(double*arr1)  {
 
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
@@ -68,7 +71,7 @@ void Algorithms::runTimeSelection(double* arr2) {
 	myfile << " sec" << endl;
 	myfile.close();	
 }
-void Algorithms::runTimeQuintuple(double* arr3){	
+void Algorithms::runTimeQuintuple(double* arr3) {
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
 	ios_base::sync_with_stdio(false);

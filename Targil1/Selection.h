@@ -5,11 +5,10 @@
 class Selection
 {
 	arrUtils a;
-private:
-	double selection(double A[], int left, int right, int i);
+	double selection(double A[], int left, int right, int i)const;
 public:
 
-	double selectionArr(arrUtils arr, double* arr2);	
+	double selectionArr(arrUtils arr, double* arr2)const;
 };
 
 

@@ -2,14 +2,14 @@
 #include "arrUtils.h"
 
 
-double Selection::selectionArr(arrUtils arr,double* arr2)//initialize arr in order to use a selection algorithm
+double Selection::selectionArr(arrUtils arr,double* arr2) const//initialize arr in order to use a selection algorithm
 {
     arr.copyArr(arr2);
     int size = arr.getSize();
     int index = arr.getIndex();
     return(selection(arr2, 0, size - 1, index)); 
 }
-double Selection::selection(double A[], int left, int right, int i)
+double Selection::selection(double A[], int left, int right, int i)const
 {
     int pivot;
     int leftPart;

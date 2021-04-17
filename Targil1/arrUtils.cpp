@@ -1,8 +1,7 @@
 #include "arrUtils.h"
 #include <iostream>
-
 using namespace std;
-bool arrUtils::isValidNumber(int str_size, char* str)
+bool arrUtils::isValidNumber(int str_size, char* str) const
 {
     int i, negative_symbol = 0;
     int counter_num_after_point = -1; // cuase in same iterstion we'r checking point_counter == 1
@@ -18,7 +17,7 @@ bool arrUtils::isValidNumber(int str_size, char* str)
               return false;
             }
         }
-        if (str[i] == '-'){
+        if (str[i] == '-'){ //for negative numbers
             if (i == size_arr - 1)
                 return false;
             if((str[i+1] < '0' || str[i+1] > '9'))
@@ -36,7 +35,7 @@ bool arrUtils::isValidNumber(int str_size, char* str)
             }
         }
     }
-    if (point_counter != 1 || point_counter == 0){
+    if (point_counter != 1 || point_counter == 0){//if the number isn`t decimal number 
         return false;
     }
     return true;
@@ -81,13 +80,13 @@ void arrUtils::setUserInput()
         i = 0;
     }
     setArr(arr);
-   // delete[] str;
+
 }
-int  arrUtils::getSize()
+int  arrUtils::getSize() const
 {
     return size_arr;
 }
-void arrUtils::indexInput(){
+void arrUtils::indexInput() {
     cin >> index;
     if (!isValidIndex(index)){
         cout << "Wrong input" << endl;
@@ -95,7 +94,7 @@ void arrUtils::indexInput(){
     }
     setIndex(index);
 }
-bool arrUtils::isValidIndex(int _index)
+bool arrUtils::isValidIndex(int _index) const
 {
     if (_index > size_arr)
     {
@@ -105,26 +104,27 @@ bool arrUtils::isValidIndex(int _index)
     {
         return false;
     }
+
     return true;
 }
-int arrUtils::getIndex()
+int arrUtils::getIndex() const
 {
     return index;
 }
-void arrUtils::copyArr(double* dest_arr)
+void arrUtils::copyArr(double* dest_arr) const
 {
     for (int i = 0; i < size_arr; i++)
     {
         dest_arr[i] = arr[i];
     }
 }
-void arrUtils::swap(double* a, double* b)
+void arrUtils::swap(double* a, double* b) const
 {
     double t = *a;
     *a = *b;
     *b = t;
 }
-void arrUtils::bubbleSort(double arr[], int n)
+void arrUtils::bubbleSort(double arr[], int n) const
 {
     int i, j;
     for (i = 0; i < n - 1; i++)
@@ -134,7 +134,7 @@ void arrUtils::bubbleSort(double arr[], int n)
             if (arr[j] > arr[j + 1])
                 swap(&arr[j], &arr[j + 1]);
 }
-int arrUtils::partitionV1(double arr[], int left, int right) {
+int arrUtils::partitionV1(double arr[], int left, int right) const {
 
     int pivot = left;
     int index = right;
@@ -168,3 +168,17 @@ void arrUtils::freeArr()
 {
     delete[] arr;
 }
+void arrUtils::setArr(double* _arr) {
+    arr = _arr;
+}
+void arrUtils::setIndex(int _index) {
+    index = _index;
+}
+void arrUtils::setSize(int _size_arr) {
+    size_arr = _size_arr;
+
+}
+//arrUtils:: ~arrUtils()
+//{
+//    delete[] arr;
+//}
