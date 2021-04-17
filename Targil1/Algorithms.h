@@ -21,11 +21,14 @@ class Algorithms
 	ofstream myfile;
 	enum { INSERATION = 1, SELECTION = 2, FIVESORT = 3 };
 	void printResult(double& algo_res, int algo) const;
-	void runTimeInsertion(double* arr1);
-	void runTimeSelection(double* arr2) ;
-	void runTimeQuintuple(double* arr3);
+	void runTimeInsertion();
+	void runTimeSelection() ;
+	void runTimeQuintuple();
+	void runTime();
+	void freeArray(double* arr1, double* arr2, double* arr3);
 
 public:
 	void run();
+	
 };
 #endif // ALGORITHMS_H

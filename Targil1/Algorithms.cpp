@@ -1,5 +1,4 @@
 #include "Algorithms.h"
-
 void Algorithms::run(){
 
 	arr.setUserInput();
@@ -13,18 +12,23 @@ void Algorithms::run(){
 	printResult(indexSelection,2);
 	printResult(indexFiveSort,3);
 
-	runTimeInsertion(arr1);
-	runTimeSelection(arr2);
-	runTimeQuintuple(arr3);
+	runTime();
+	freeArray(arr1, arr2, arr3);
+	
+}
+void Algorithms::runTime() {
 
+	runTimeInsertion();
+	runTimeSelection();
+	runTimeQuintuple();
+}
+void Algorithms::freeArray(double* arr1,double*arr2,double* arr3) {
 	delete[] arr1;
 	delete[] arr2;
 	delete[] arr3;
 	arr.freeArr();
-
-
-	
 }
+
 void Algorithms::printResult(double& algo_res,int algo) const
 {
 	cout << fixed << showpoint;
@@ -39,8 +43,9 @@ void Algorithms::printResult(double& algo_res,int algo) const
 	}
 
 }
-void Algorithms::runTimeInsertion(double*arr1)  {
+void Algorithms::runTimeInsertion()  {
 
+	double* arr1 = new  double[arr.getSize()];
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
 	ios_base::sync_with_stdio(false);
@@ -54,10 +59,12 @@ void Algorithms::runTimeInsertion(double*arr1)  {
 	myfile << "Time taken by function Insertion is : " << fixed << time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();
+	delete[] arr1;
 }
 
-void Algorithms::runTimeSelection(double* arr2) {
+void Algorithms::runTimeSelection() {
 
+	double* arr2 = new  double[arr.getSize()];
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
 	ios_base::sync_with_stdio(false);
@@ -70,8 +77,10 @@ void Algorithms::runTimeSelection(double* arr2) {
 	myfile << "Time taken by function Selection is : " << fixed << time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();	
+	delete[] arr2;
 }
-void Algorithms::runTimeQuintuple(double* arr3) {
+void Algorithms::runTimeQuintuple() {
+	double* arr3 = new double[arr.getSize()];
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
 	ios_base::sync_with_stdio(false);
@@ -84,4 +93,5 @@ void Algorithms::runTimeQuintuple(double* arr3) {
 	myfile << "Time taken by function Quintuplet is : " << fixed << time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();
+	delete[] arr3;
 }

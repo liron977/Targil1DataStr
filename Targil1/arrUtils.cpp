@@ -29,13 +29,13 @@ bool arrUtils::isValidNumber(int str_size, char* str) const
         }
         if (point_counter == 1) { // if there are more the 4 numbers after the poit
             counter_num_after_point++;
-            if (counter_num_after_point > 5)
+            if (counter_num_after_point >= 5)
             {
                 return false;
             }
         }
     }
-    if (point_counter != 1 || point_counter == 0){//if the number isn`t decimal number 
+    if (point_counter != 1 || point_counter == 0){//(0)-if the number isn`t decimal number,(1)-in order to make sure that the number has only one point
         return false;
     }
     return true;
@@ -49,8 +49,7 @@ void arrUtils::setUserInput()
     double num;
     char* tmp;
     cin >> size_arr;
-    if (size_arr < 1)
-    {
+    if (size_arr < 1) {
         cout << "Wrong input" << endl;
         exit(-1);
     }

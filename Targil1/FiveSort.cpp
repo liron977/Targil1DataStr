@@ -1,6 +1,5 @@
 #include "FiveSort.h"
 #include "arrUtils.h"
-
 double FiveSort::fiveSortArr(arrUtils a,double* arr3) const
 {
     a.copyArr(arr3);
