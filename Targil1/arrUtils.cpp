@@ -35,7 +35,7 @@ bool arrUtils::isValidNumber(int str_size, char* str) const
             }
         }
     }
-    if (point_counter != 1 || point_counter == 0){//(0)-if the number isn`t decimal number,(1)-in order to make sure that the number has only one point
+    if (point_counter != 1 || point_counter == 0|| counter_num_after_point==0){//(point_counter == 0)-if the number isn`t decimal number,(point_counter != 1)-in order to make sure that the number has only one point,(counter_num_after_point==0)-to make sure tjat after the point we have number
         return false;
     }
     return true;
