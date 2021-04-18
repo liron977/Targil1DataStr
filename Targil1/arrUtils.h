@@ -22,7 +22,6 @@ public:
 	void bubbleSort(double arr[], int n) const;
 	int partitionV1(double arr[], int left, int right) const;
 	void freeArr();
-	/*~arrUtils();*/
 };
 
 #endif //_ARRUTILS_H

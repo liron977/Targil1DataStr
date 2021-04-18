@@ -1,6 +1,5 @@
 #include "arrUtils.h"
 #include <iostream>
-#include <string>
 using namespace std;
 bool arrUtils::isValidNumber(int str_size, char* str) const
 {
@@ -179,7 +178,3 @@ void arrUtils::setSize(int _size_arr) {
     size_arr = _size_arr;
 
 }
-//arrUtils:: ~arrUtils()
-//{
-//    delete[] arr;
-//}

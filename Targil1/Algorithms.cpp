@@ -46,7 +46,6 @@ void Algorithms::runInsertionSort(arrUtils arr,double*arr1)  {
 	// Calculating total time taken by the program.
 	double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
 	time_taken *= 1e-9;
-	//ofstream myfile("Measure.txt"); // The name of the file
 	myfile.open("Measure.txt",ios_base::app);
 	myfile << "Time taken by function Insertion is : " << fixed << time_taken << setprecision(9);
 	myfile << " sec" << endl;

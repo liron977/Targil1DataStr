@@ -43,7 +43,7 @@ double FiveSort::sort(double* arr, int left, int index, int size) const
             return sort(arr + k + 1, 0, index - k - 1, size - k - 1);
         }
         if (k == index) {
-          return (arr[k-1]);
+          return (arr[k]);
      
         }
     }
