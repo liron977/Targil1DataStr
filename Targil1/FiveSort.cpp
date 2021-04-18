@@ -5,14 +5,14 @@ double FiveSort::fiveSortArr(arrUtils a,double* arr3) const
     a.copyArr(arr3);
     int size = a.getSize();
     int index = a.getIndex();
-    return(sort(arr3, 0, index, size-1));
+    return(sort(arr3, 0, index - 1, size - 1));
 }
 double FiveSort::sort(double* arr, int left, int index, int size) const
 {
     int pivot_index = 0;
     if (size <= MIN_SIZE) {
         a.bubbleSort(arr, size + 1);
-        return arr[index - 1];
+        return arr[index];
     }
     else {
         int b_size = (size + (MIN_SIZE - 1)) / MIN_SIZE;
@@ -40,7 +40,7 @@ double FiveSort::sort(double* arr, int left, int index, int size) const
             return sort(arr, 0, index, k - 1);
         }
         if (k < index) {
-            return sort(arr + k + 1, k + 1, index - k - 1, size - k - 1);
+            return sort(arr + k + 1, 0, index - k - 1, size - k - 1);
         }
         if (k == index) {
           return (arr[k-1]);
