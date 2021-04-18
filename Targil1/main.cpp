@@ -5,5 +5,4 @@ int main()
 	Algorithms algorithm;
 	algorithm.run();	
 
-
 }

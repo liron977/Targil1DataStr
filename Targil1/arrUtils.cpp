@@ -1,5 +1,6 @@
 #include "arrUtils.h"
 #include <iostream>
+#include <string>
 using namespace std;
 bool arrUtils::isValidNumber(int str_size, char* str) const
 {
@@ -66,10 +67,11 @@ void arrUtils::setUserInput()
            cin.get(curr_char);
             i++;
         }
-        str[i + 1] = '\n';
+       str[i] = '\n';
         if (isValidNumber(i, str)) // i is the str size
         {
-            num = atof(str); //we got a valid number and change its type to double 
+           num = atof(str); //we got a valid number and change its type to double 
+            //num =std::stod(str, i + 1);
             arr[j] = num;
         }
         else {

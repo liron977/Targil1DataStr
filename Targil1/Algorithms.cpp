@@ -2,25 +2,17 @@
 void Algorithms::run(){
 
 	arr.setUserInput();
+
 	double* arr1 = new  double[arr.getSize()];
 	double* arr2 = new  double[arr.getSize()];
 	double* arr3= new double[arr.getSize()];
-	double indexAlgorithm = insertionSort.insertionSort(arr,arr1);
-	double indexSelection = selection.selectionArr(arr, arr2);
-	double indexFiveSort = fiveSort.fiveSortArr(arr,arr3);
-	printResult(indexAlgorithm,1);
-	printResult(indexSelection,2);
-	printResult(indexFiveSort,3);
 
-	runTime();
+	runInsertionSort(arr,arr1);
+	runSelectionSort(arr, arr2);
+	runeQuintupleSort(arr, arr3);
+	
 	freeArray(arr1, arr2, arr3);
 	
-}
-void Algorithms::runTime() {
-
-	runTimeInsertion();
-	runTimeSelection();
-	runTimeQuintuple();
 }
 void Algorithms::freeArray(double* arr1,double*arr2,double* arr3) {
 	delete[] arr1;
@@ -43,13 +35,13 @@ void Algorithms::printResult(double& algo_res,int algo) const
 	}
 
 }
-void Algorithms::runTimeInsertion()  {
+void Algorithms::runInsertionSort(arrUtils arr,double*arr1)  {
 
-	double* arr1 = new  double[arr.getSize()];
+	
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
 	ios_base::sync_with_stdio(false);
-	insertionSort.insertionSort(arr, arr1);// Here you put the name of the function you wish to measure
+	double indexInsertionSort = insertionSort.insertionSort(arr, arr1);
 	auto end = chrono::high_resolution_clock::now();
 	// Calculating total time taken by the program.
 	double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -59,16 +51,17 @@ void Algorithms::runTimeInsertion()  {
 	myfile << "Time taken by function Insertion is : " << fixed << time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();
-	delete[] arr1;
+	printResult(indexInsertionSort, 1);
+
 }
 
-void Algorithms::runTimeSelection() {
+void Algorithms::runSelectionSort(arrUtils arr, double* arr2) {
 
-	double* arr2 = new  double[arr.getSize()];
+	
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
 	ios_base::sync_with_stdio(false);
-	selection.selectionArr(arr,arr2);
+	double indexSelection = selection.selectionArr(arr, arr2);
 	auto end = chrono::high_resolution_clock::now();
 	// Calculating total time taken by the program.
 	double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -77,14 +70,15 @@ void Algorithms::runTimeSelection() {
 	myfile << "Time taken by function Selection is : " << fixed << time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();	
-	delete[] arr2;
+	printResult(indexSelection, 2);
+
 }
-void Algorithms::runTimeQuintuple() {
-	double* arr3 = new double[arr.getSize()];
+void Algorithms::runeQuintupleSort(arrUtils arr, double* arr3) {
+	
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.
 	ios_base::sync_with_stdio(false);
-	fiveSort.fiveSortArr(arr, arr3);
+	double indexFiveSort = fiveSort.fiveSortArr(arr, arr3);
 	auto end = chrono::high_resolution_clock::now();
 	// Calculating total time taken by the program.
 	double time_taken = chrono::duration_cast<chrono::nanoseconds>(end - start).count();
@@ -93,5 +87,5 @@ void Algorithms::runTimeQuintuple() {
 	myfile << "Time taken by function Quintuplet is : " << fixed << time_taken << setprecision(9);
 	myfile << " sec" << endl;
 	myfile.close();
-	delete[] arr3;
+	printResult(indexFiveSort, 3);
 }
