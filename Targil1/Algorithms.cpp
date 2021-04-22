@@ -35,7 +35,7 @@ void Algorithms::printResult(double& algo_res,int algo) const
 	}
 
 }
-void Algorithms::runInsertionSort(arrUtils arr,double*arr1)  {
+void Algorithms::runInsertionSort(const arrUtils& arr,double*arr1)  {
 
 	
 	auto start = chrono::high_resolution_clock::now();
@@ -54,7 +54,7 @@ void Algorithms::runInsertionSort(arrUtils arr,double*arr1)  {
 
 }
 
-void Algorithms::runSelectionSort(arrUtils arr, double* arr2) {
+void Algorithms::runSelectionSort(const arrUtils& arr, double* arr2) {
 
 	
 	auto start = chrono::high_resolution_clock::now();
@@ -72,7 +72,7 @@ void Algorithms::runSelectionSort(arrUtils arr, double* arr2) {
 	printResult(indexSelection, 2);
 
 }
-void Algorithms::runeQuintupleSort(arrUtils arr, double* arr3) {
+void Algorithms::runeQuintupleSort(const arrUtils& arr, double* arr3) {
 	
 	auto start = chrono::high_resolution_clock::now();
 	// unsync the I/O of C and C++.

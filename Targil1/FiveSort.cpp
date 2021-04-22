@@ -1,6 +1,6 @@
 #include "FiveSort.h"
 #include "arrUtils.h"
-double FiveSort::fiveSortArr(arrUtils a,double* arr3) const
+double FiveSort::fiveSortArr(const arrUtils& a,double* arr3) const
 {
     a.copyArr(arr3);
     int size = a.getSize();

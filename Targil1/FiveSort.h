@@ -8,7 +8,7 @@ class FiveSort
 	arrUtils a;
 	double sort(double* arr, int left, int index, int size) const;
 public:
-	double fiveSortArr(arrUtils a, double* arr3) const;
+	double fiveSortArr(const arrUtils& a, double* arr3) const;
 };
 
 #endif// _FIVESORT_H

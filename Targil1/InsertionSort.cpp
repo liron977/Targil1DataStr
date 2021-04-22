@@ -8,7 +8,7 @@
 #include <chrono>
 using namespace std;
 
-double InsertionSort::insertionSort(arrUtils arr,double* arr1) const
+double InsertionSort::insertionSort(const arrUtils& arr,double* arr1) const
 {
     arr.copyArr(arr1);
     double key;

@@ -8,7 +8,7 @@ class Selection
 	double selection(double A[], int left, int right, int i)const;
 public:
 
-	double selectionArr(arrUtils arr, double* arr2)const;
+	double selectionArr(const arrUtils& arr, double* arr2)const;
 };
 
 

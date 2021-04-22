@@ -2,7 +2,7 @@
 #include "arrUtils.h"
 
 
-double Selection::selectionArr(arrUtils arr,double* arr2) const//initialize arr in order to use a selection algorithm
+double Selection::selectionArr(const arrUtils& arr,double* arr2) const//initialize arr in order to use a selection algorithm
 {
     arr.copyArr(arr2);
     int size = arr.getSize();
