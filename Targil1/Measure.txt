@@ -7,3 +7,6 @@ Time taken by function Quintuplet is : 0.000007900 sec
 Time taken by function Insertion is : 0.000008 sec
 Time taken by function Selection is : 0.000001300 sec
 Time taken by function Quintuplet is : 0.000004300 sec
+Time taken by function Insertion is : 0.000019 sec
+Time taken by function Selection is : 0.000001400 sec
+Time taken by function Quintuplet is : 0.000004100 sec
